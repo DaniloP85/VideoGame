@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-Cu-hxF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eXA-lX-XqW">
+                                <rect key="frame" x="30" y="710.66666666666663" width="315" height="71.333333333333371"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-EC-dYs">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-yC-SXZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Biblioteca"/>
+                                                <connections>
+                                                    <action selector="showLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHh-hM-UWO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDn-PP-pIY">
+                                                <rect key="frame" x="167.66666666666663" y="0.0" width="147.33333333333337" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Camera"/>
+                                                <connections>
+                                                    <action selector="showCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fip-5k-fuN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elS-t3-nk2">
+                                        <rect key="frame" x="0.0" y="51" width="315" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RJo-Cu-hxF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L1v-Ya-vuX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXA-lX-XqW" secondAttribute="trailing" constant="30" id="MEo-Fe-SI9"/>
+                            <constraint firstAttribute="bottom" secondItem="eXA-lX-XqW" secondAttribute="bottom" constant="30" id="XHw-cd-Pxw"/>
+                            <constraint firstAttribute="bottom" secondItem="RJo-Cu-hxF" secondAttribute="bottom" id="ZJq-AJ-un0"/>
+                            <constraint firstItem="RJo-Cu-hxF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bIk-Tp-xL2"/>
+                            <constraint firstItem="eXA-lX-XqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gzz-IB-2Xv"/>
+                            <constraint firstItem="RJo-Cu-hxF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tom-oL-3JW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCamera" destination="UDn-PP-pIY" id="EtJ-5E-pn8"/>
+                        <outlet property="imageView" destination="RJo-Cu-hxF" id="Bdo-wg-2wJ"/>
+                        <outlet property="labelResult" destination="elS-t3-nk2" id="hpV-fv-cDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
